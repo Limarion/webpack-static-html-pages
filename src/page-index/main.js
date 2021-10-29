@@ -1,4 +1,4 @@
-import './page.css'
+import './page.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')

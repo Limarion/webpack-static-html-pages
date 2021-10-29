@@ -36,8 +36,8 @@ const config = {
         }
       },
       {
-        test: /\.css$/i,
-        use: [stylesHandler, 'css-loader', 'postcss-loader']
+        test: /\.(scss|css)$/i,
+        use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
         // https://webpack.js.org/guides/asset-modules/#resource-assets
@@ -118,7 +118,6 @@ module.exports = () => {
     // https://webpack.js.org/configuration/dev-server/
     config.devServer = {
       port: 8080,
-      writeToDisk: false, // https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-
       host: 'localhost'
     }
   }
